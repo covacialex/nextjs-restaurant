@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Dosis", sans-serif;
 }
 
 a {
@@ -13,6 +14,8 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +24,110 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background-color: var(--bg-color);
   }
+}
+
+:root {
+  --font-family: "Dosis", sans-serif;
+
+  --bg-color: rgb(14, 13, 11);
+  --bg-color-alt: rgb(23, 24, 26);
+  --text-light: #fff;
+  --text-dark: #000;
+  --text-gray: rgb(81, 80, 76);
+  --text-alt: rgb(187, 161, 117);
+
+  --font-sm: 0.7rem;
+  --font-md: 1rem;
+  --font-bg: 4.6rem;
+
+  --font-weight-sm: 300;
+  --font-weight-md: 400;
+  --font-weight-lg: 700;
+
+  --letter-space: 0.1rem;
+  --line-height: 4.6rem;
+}
+
+.button-transparent {
+  font-family: var(--font-family);
+  padding: 0.6rem 2rem;
+  color: var(--text-alt);
+  background-color: transparent;
+  border: 1px solid var(--text-alt);
+  text-transform: uppercase;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-lg);
+  letter-spacing: var(--letter-space);
+  cursor: pointer;
+
+  transition: all 0.4s;
+}
+
+.button-transparent:hover {
+  color: var(--text-light);
+  background-color: var(--text-alt);
+  border: 1px solid var(--text-light);
+}
+
+.button {
+  font-family: var(--font-family);
+  padding: 0.6rem 2rem;
+  color: var(--text-dark);
+  background-color: var(--text-alt);
+  text-transform: uppercase;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-lg);
+  letter-spacing: var(--letter-space);
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  transition: all 0.4s;
+}
+
+.button:hover {
+  color: var(--text-alt);
+  background-color: transparent;
+  border: 1px solid var(--text-alt);
+}
+
+/* Main title and text */
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 1rem;
+}
+
+.main__title-sm {
+  font-size: var(--font-sm);
+  color: var(--text-alt);
+  font-weight: var(--font-weight-lg);
+  letter-spacing: var(--letter-space);
+  text-transform: uppercase;
+}
+
+.main__title-bg {
+  color: var(--text-light);
+  font-size: var(--font-bg);
+  font-weight: var(--font-weight-md);
+  line-height: var(--line-height);
+}
+
+.main__text {
+  color: var(--text-light);
+  font-size: var(--font-md);
+  line-height: 1.8;
+
+  padding-bottom: 1.4rem;
+}
+
+/* Helpers */
+.heading-sm {
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-sm);
 }

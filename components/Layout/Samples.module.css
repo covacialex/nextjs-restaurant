@@ -1,0 +1,60 @@
+.container {
+  background-color: var(--bg-color);
+  height: 100vh;
+  padding-top: 5rem;
+}
+
+.content {
+  width: 32vw;
+  margin: 0 auto;
+}
+
+.samples {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21rem;
+}
+
+.sample {
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  transform: translateY(-4rem);
+}
+
+.imageContainer {
+  position: relative;
+  width: 400%;
+  height: 20rem;
+}
+
+.view {
+  cursor: pointer;
+  color: var(--text-alt);
+  text-transform: uppercase;
+  font-size: var(--font-sm);
+
+  position: relative;
+}
+
+.view::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  color: var(--text-alt);
+  background-color: var(--text-alt);
+  width: 100%;
+  height: 1px;
+}
+
+.view:hover {
+}
+
+.imageTrans {
+  transform: translateY(1rem);
+}
