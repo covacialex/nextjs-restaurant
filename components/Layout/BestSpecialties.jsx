@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./BestSpecialties.module.css";
 import Image from "next/image";
+import BookForm from "../UI/BookForm";
 
 const BestSpecialties = () => {
   return (
@@ -48,38 +49,39 @@ const BestSpecialties = () => {
         </div>
       </div>
 
-      <div className={classes.form}>
-        <div className={classes.form__first}>
-          <input type="text" name="name" placeholder="Your Name" />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone number"
-            required
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-          />
+      <div className={classes.form__container}>
+        <div className={classes.form__order}>
+          <h2>Online Reservation</h2>
+          <p>
+            Booking request <a className={classes.number}>+40 000 000 000</a> or
+            fill out the order form.
+          </p>
+          <BookForm />
         </div>
+        <div className={classes.info}>
+          <h2>Contact Us</h2>
 
-        <div className={classes.form__second}>
-          <select name="cars" className={classes.dropdown}>
-            <option value="1">1 Person</option>
-            <option value="2">2 People</option>
-            <option value="5">10+ People</option>
-          </select>
-          <input type="date" name="date" className={classes.date} />
-          <input type="time" min="10:00" max="18:00" className={classes.time} />
+          <div className={classes.request}>
+            <h5>Booking request</h5>
+            <a href="tel:+40 759 552 234" className={classes.number}>
+              +40 759 552 234
+            </a>
+          </div>
+
+          <div className={classes.location}>
+            <h5>Location</h5>
+            <address>
+              Restaurant Delicious, Str Alexandru Ciurea 6 Cluj-Napoca
+            </address>
+          </div>
+
+          <div className={classes.lunch}>
+            <h5>Lunch time</h5>
+            <p>
+              Monday to Sunday <br /> 11:00am - 2:30pm
+            </p>
+          </div>
         </div>
-
-        <div className={classes.message}>
-          <textarea
-            className={classes.message__text}
-            placeholder="Message (optional)"
-          ></textarea>
-        </div>
-
-        <button type="button" className="button">
-          Book a table
-        </button>
       </div>
     </div>
   );

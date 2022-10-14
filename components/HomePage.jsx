@@ -2,10 +2,19 @@ import React from "react";
 import classes from "./HomePage.module.css";
 import dish from "../public/assets/home-dish.jpg";
 import { AiOutlineBook } from "react-icons/ai";
+import Image from "next/image";
 
 const HomePage = () => {
   return (
     <div className={classes.container}>
+      <Image
+        src="/assets/home-dish.jpg"
+        layout="fill"
+        // objectFit="contain"
+        priority="true"
+        alt="A chef preparing a dish"
+        className={classes.image}
+      />
       <div className="main__content">
         <h4 className="main__title-sm ">Delightful Experience</h4>
         <h1 className="main__title-bg">

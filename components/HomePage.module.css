@@ -1,6 +1,4 @@
 .container {
-  background: url("../public/assets/home-dish.jpg");
-  /* background: gray; */
   background-size: 100%;
   background-repeat: no-repeat;
   backdrop-filter: grayscale(100);
@@ -9,6 +7,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.image {
+  z-index: -5;
+  /* background-size: cover; */
 }
 
 .overlay {

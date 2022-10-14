@@ -30,7 +30,7 @@ const Samples = () => {
             />
           </div>
           <h3 className="heading-sm">Breakfast</h3>
-          <Link href="/">
+          <Link href="/menu">
             <p className={classes.view}>View menu</p>
           </Link>
         </div>
@@ -45,7 +45,7 @@ const Samples = () => {
             />
           </div>
           <h3 className="heading-sm">Appetizers</h3>
-          <Link href="/">
+          <Link href="/menu">
             <p className={classes.view}>View menu</p>
           </Link>
         </div>
@@ -60,7 +60,7 @@ const Samples = () => {
             />
           </div>
           <h3 className="heading-sm">Drinks</h3>
-          <Link href="/">
+          <Link href="/menu">
             <p className={classes.view}>View menu</p>
           </Link>
         </div>

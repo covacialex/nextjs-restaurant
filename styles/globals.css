@@ -33,6 +33,7 @@ a {
 
   --bg-color: rgb(14, 13, 11);
   --bg-color-alt: rgb(23, 24, 26);
+  --bg-color-gray: rgb(33, 33, 34);
   --text-light: #fff;
   --text-dark: #000;
   --text-gray: rgb(81, 80, 76);
@@ -40,6 +41,7 @@ a {
 
   --font-sm: 0.7rem;
   --font-md: 1rem;
+  --font-lg: 1.8rem;
   --font-bg: 4.6rem;
 
   --font-weight-sm: 300;
