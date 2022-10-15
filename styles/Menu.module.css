@@ -1,0 +1,30 @@
+.container {
+  background-color: var(--bg-color);
+  min-height: 80vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+.menu__header {
+  padding-top: 20%;
+  position: relative;
+}
+
+.menu__container {
+  background: var(--bg-color);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 15%);
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.image__wrapper {
+  position: relative;
+  height: 50vh;
+}
+
+.image__background {
+  z-index: -1;
+}
