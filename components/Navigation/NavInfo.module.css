@@ -1,17 +1,18 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 3.6rem;
-  /* background-color: transparent; */
-  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.4);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  height: 4vh;
   z-index: 1;
+}
 
+.info {
+  padding: 0 3.6rem;
+  height: 4vh;
   font-size: var(--font-md);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.4);
 }
 
 .left,
@@ -35,24 +36,6 @@
 .phone,
 .mail {
   gap: 0.4rem;
-}
-
-.left {
-}
-
-.address {
-}
-
-.hours {
-}
-
-.right {
-}
-
-.phone {
-}
-
-.mail {
 }
 
 .icon {

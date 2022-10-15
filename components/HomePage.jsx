@@ -3,6 +3,7 @@ import classes from "./HomePage.module.css";
 import dish from "../public/assets/home-dish.jpg";
 import { AiOutlineBook } from "react-icons/ai";
 import Image from "next/image";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -28,16 +29,18 @@ const HomePage = () => {
         </button>
       </div>
 
-      <div className={classes.book}>
-        <button type="button" className={classes.first}>
-          <AiOutlineBook className={classes.icon} />
-          <p className={classes.book__text}>
-            Book a <br />
-            table
-          </p>
-        </button>
-        <div className={classes.second}></div>
-      </div>
+      <Link href="#form">
+        <div className={classes.book}>
+          <button type="button" className={classes.first}>
+            <AiOutlineBook className={classes.icon} />
+            <p className={classes.book__text}>
+              Book a <br />
+              table
+            </p>
+          </button>
+          <div className={classes.second}></div>
+        </div>
+      </Link>
 
       <div className={classes.overlay}></div>
     </div>
