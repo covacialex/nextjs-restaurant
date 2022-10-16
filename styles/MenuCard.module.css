@@ -12,6 +12,9 @@
 .image {
   cursor: pointer;
   border-radius: 1rem;
+  width: 13rem;
+  height: 13rem;
+  object-fit: cover;
 }
 
 .card__info {

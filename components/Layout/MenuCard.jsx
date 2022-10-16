@@ -1,18 +1,16 @@
 import React from "react";
 import classes from "../../styles/MenuCard.module.css";
-import Image from "next/image";
 import Link from "next/link";
+import { urlFor } from "../../lib/client";
 
-const MenuCard = ({ img, title, desc, price, id }) => {
+const MenuCard = ({ img, title, desc, price, id, slug }) => {
+  console.log(slug);
   return (
-    <div className={classes.card}>
-      <Link href={`product/${id}`}>
-        <Image
-          src={`/assets/dishes/${img}`}
+    <li className={classes.card} key={id}>
+      <Link href={`product/${slug.current}`}>
+        <img
+          src={urlFor(img)}
           alt="Photo of prepared food"
-          width="200"
-          height="200"
-          objectFit="cover"
           className={classes.image}
         />
       </Link>
@@ -23,7 +21,7 @@ const MenuCard = ({ img, title, desc, price, id }) => {
           <span className={classes.price}>${price}</span>
         </Link>
       </div>
-    </div>
+    </li>
   );
 };
 

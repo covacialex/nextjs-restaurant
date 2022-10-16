@@ -3,38 +3,10 @@ import MenuCard from "../../components/Layout/MenuCard";
 import classes from "../../styles/Menu.module.css";
 import Image from "next/image";
 
-const Menu = () => {
-  const menuData = [
-    {
-      img: "chicken.jpg",
-      id: 1,
-      title: "Greek Salad",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad ex nihil",
-      price: "39.00",
-    },
-    {
-      img: "lasagna.jpg",
-      id: 2,
-      title: "Lasagna",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad ex nihil",
-      price: "39.00",
-    },
-    {
-      img: "chicken.jpg",
-      id: 3,
-      title: "Raviolli",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad ex nihil",
-      price: "39.00",
-    },
-    {
-      img: "chicken.jpg",
-      id: 4,
-      title: "Turkish Salad",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ad ex nihil",
-      price: "39.00",
-    },
-  ];
+import { client } from "../../lib/client";
 
+const Menu = ({ menuData }) => {
+  console.log(menuData);
   return (
     <div className={classes.container}>
       <div className={classes.menu__header}>
@@ -58,17 +30,29 @@ const Menu = () => {
         {menuData.map((product) => {
           return (
             <MenuCard
-              img={product.img}
-              title={product.title}
-              desc={product.desc}
+              img={product.image[0]}
+              title={product.Name}
+              desc={product.description}
               price={product.price}
-              id={product.id}
+              id={product._id}
+              key={product._id}
+              slug={product.slug}
             />
           );
         })}
       </div>
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "product"]';
+
+  const menuData = await client.fetch(query);
+
+  return {
+    props: { menuData },
+  };
 };
 
 export default Menu;
