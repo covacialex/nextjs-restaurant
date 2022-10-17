@@ -38,6 +38,7 @@ a {
   --text-dark: #000;
   --text-gray: rgb(107, 106, 102);
   --text-alt: rgb(187, 161, 117);
+  --remove-icon: rgb(165, 14, 14);
 
   --font-sm: 0.7rem;
   --font-md: 1rem;
