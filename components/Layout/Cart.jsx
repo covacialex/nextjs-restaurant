@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "../../styles/Cart.module.css";
 import { useRef } from "react";
 import Link from "next/link";
+
 import {
   AiOutlinePlus,
   AiOutlineMinus,
@@ -9,11 +10,14 @@ import {
   AiOutlineShopping,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
+
 import { useStateContext } from "../../context/StateContext";
 import { urlFor } from "../../lib/client";
+import getStripe from "../../lib/getStripe";
 
 const Cart = () => {
   const cartRef = useRef();
+
   const {
     totalPrice,
     totalQuantities,
@@ -22,6 +26,25 @@ const Cart = () => {
     toggleCartItemQuantity,
     onRemove,
   } = useStateContext();
+
+  const handleCheckout = async () => {
+    // Get promise from lib
+    const stripe = await getStripe();
+
+    // Make API req
+    const response = await fetch("/api/stripe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cartItems),
+    });
+
+    if (response.statusCode === 500) return;
+
+    const data = await response.json();
+    console.log(data);
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+  };
 
   return (
     <div className={classes.cart__wrapper} ref={cartRef}>
@@ -37,10 +60,10 @@ const Cart = () => {
         </button>
 
         {cartItems.length < 1 && (
-          <div>
+          <div className={classes.cart__empty}>
             <AiOutlineShopping size={150} />
             <h3>Your shopping cart is empty</h3>
-            <Link href="/">
+            <Link href="/menu">
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
@@ -52,7 +75,10 @@ const Cart = () => {
           </div>
         )}
 
-        <div className={classes.product__container}>
+        <div
+          className={classes.product__container}
+          onClick={console.log(cartItems)}
+        >
           {cartItems.length >= 1 &&
             cartItems.map((item) => (
               <div className={classes.product} key={item._id}>
@@ -102,12 +128,11 @@ const Cart = () => {
         {cartItems.length >= 1 && (
           <div className={classes.cart__bottom}>
             <div className={classes.total}>
-              <h3>
-                Subtotal:<h3>${totalPrice}</h3>
-              </h3>
+              <h3>Subtotal:</h3>
+              <p>${totalPrice}</p>
             </div>
             <div className={classes.button__container}>
-              <button type="button" className="button" onClick="">
+              <button type="button" className="button" onClick={handleCheckout}>
                 Pay with Stripe
               </button>
             </div>

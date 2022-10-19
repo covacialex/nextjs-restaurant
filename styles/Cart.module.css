@@ -26,6 +26,7 @@
   font-family: var(--font-family);
   font-size: var(--font-md);
   font-weight: var(--font-weight-md);
+  color: var(--text-light);
   cursor: pointer;
   gap: 2px;
   margin-left: 10px;
@@ -106,5 +107,43 @@
 }
 
 .cart__bottom {
-  color: #000;
+  position: absolute;
+  bottom: 12px;
+  right: 5px;
+  width: 100%;
+  padding: 30px 65px;
+
+  color: var(--text-light);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: var(--font-lg);
+}
+
+.total h3 {
+  font-weight: var(--font-weight-md);
+}
+
+.total p {
+  font-weight: var(--font-weight-md);
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  margin-top: 0.6rem;
+}
+
+.cart__empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

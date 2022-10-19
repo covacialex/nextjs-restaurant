@@ -22,19 +22,19 @@ const Nav = () => {
         <Link href="/menu">
           <li>Menu</li>
         </Link>
-        <Link href="#form">
+        <Link href="/#form">
           <li>Reservations</li>
         </Link>
-        <Link href="#form">
+        <Link href="/#form">
           <li>Events</li>
         </Link>
-        <Link href="#form">
+        <Link href="/#form">
           <li>Contact</li>
         </Link>
       </ul>
       <div className={classes.buttons}>
-        <button className="button">Find a table</button>
-        <button className="button-transparent">Order some food</button>
+        {/* <button className="button">Find a table</button>
+        <button className="button-transparent">Order some food</button> */}
         <button className={classes.cart} onClick={() => setShowCart(true)}>
           <AiOutlineShopping />
           <span className={classes.cart__qty}>{totalQuantities}</span>
