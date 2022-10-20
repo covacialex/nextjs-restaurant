@@ -7,18 +7,20 @@ const MenuCard = ({ img, title, desc, price, id, slug }) => {
   return (
     <li className={classes.card} key={id}>
       <Link href={`product/${slug.current}`}>
-        <img
-          src={urlFor(img)}
-          alt="Photo of prepared food"
-          className={classes.image}
-        />
+        <div className={classes.image_wrapper}>
+          <img
+            src={urlFor(img)}
+            alt="Photo of prepared food"
+            className={classes.image}
+          />
+        </div>
       </Link>
       <div className={classes.card__info}>
         <h3 className={classes.title}>{title}</h3>
         <p className={classes.desc}>{desc}</p>
-        <Link href="/">
+        <div>
           <span className={classes.price}>${price}</span>
-        </Link>
+        </div>
       </div>
     </li>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./HomePage.module.css";
-import dish from "../public/assets/home-dish.jpg";
 import { AiOutlineBook } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +10,6 @@ const HomePage = () => {
       <Image
         src="/assets/home-dish.jpg"
         layout="fill"
-        // objectFit="contain"
         priority="true"
         alt="A chef preparing a dish"
         className={classes.image}
@@ -24,9 +22,11 @@ const HomePage = () => {
         <p className="main__text">
           Come with family & feel the joy of mouthwatering food
         </p>
-        <button type="button" className="button-transparent">
-          View our menu
-        </button>
+        <Link href="/menu">
+          <button type="button" className="button-transparent">
+            View our menu
+          </button>
+        </Link>
       </div>
 
       <Link href="#form">

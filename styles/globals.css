@@ -53,6 +53,10 @@ a {
   --line-height: 4.6rem;
 }
 
+.main-content {
+  position: relative;
+}
+
 .button-transparent {
   font-family: var(--font-family);
   padding: 0.6rem 2rem;
@@ -90,6 +94,33 @@ a {
 }
 
 .button:hover {
+  color: var(--text-alt);
+  background-color: transparent;
+  border: 1px solid var(--text-alt);
+}
+
+.arrow-wrapper {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+}
+
+.arrow {
+  font-family: var(--font-family);
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  color: var(--text-dark);
+  background-color: var(--text-alt);
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-lg);
+  letter-spacing: var(--letter-space);
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  transition: all 0.4s;
+}
+
+.arrow:hover {
   color: var(--text-alt);
   background-color: transparent;
   border: 1px solid var(--text-alt);

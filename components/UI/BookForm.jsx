@@ -19,14 +19,16 @@ const BookForm = () => {
     const enteredTime = timeRef.current.value;
     const enteredMessage = messageRef.current.value;
 
-    console.log(
-      enteredName,
-      enteredPhone,
-      enteredPerson,
-      enteredDate,
-      enteredTime,
-      enteredMessage
-    );
+    const bookingData = {
+      name: enteredName,
+      number: enteredPhone,
+      numOfPeople: enteredPerson,
+      date: enteredDate,
+      time: enteredTime,
+      message: enteredMessage,
+    };
+
+    console.log(bookingData);
   };
 
   return (
@@ -49,8 +51,8 @@ const BookForm = () => {
         <input type="date" name="date" className={classes.date} ref={dateRef} />
         <input
           type="time"
-          min="10:00"
-          max="18:00"
+          // min="10:00"
+          // max="18:00"
           className={classes.time}
           ref={timeRef}
         />

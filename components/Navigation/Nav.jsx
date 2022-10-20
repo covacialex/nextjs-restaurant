@@ -4,7 +4,8 @@ import { GiWineBottle } from "react-icons/gi";
 import Link from "next/link";
 import Cart from "../Layout/Cart";
 import { useStateContext } from "../../context/StateContext";
-import { AiOutlineShopping } from "react-icons/ai";
+
+import { BsCart, BsCartCheck } from "react-icons/bs";
 
 const Nav = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
@@ -33,10 +34,8 @@ const Nav = () => {
         </Link>
       </ul>
       <div className={classes.buttons}>
-        {/* <button className="button">Find a table</button>
-        <button className="button-transparent">Order some food</button> */}
         <button className={classes.cart} onClick={() => setShowCart(true)}>
-          <AiOutlineShopping />
+          {totalQuantities >= 1 ? <BsCartCheck /> : <BsCart />}
           <span className={classes.cart__qty}>{totalQuantities}</span>
         </button>
 
