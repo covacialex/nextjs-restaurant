@@ -1,5 +1,7 @@
 ## Restaurant Delicios
 
+Live demo: https://nextjs-restaurant-six.vercel.app/
+
 ### Made using React, NextJS, Stripe for payment, and Sanity for backend.
 
 Created completely from scratch in trying to learn more about React/NextJS.
