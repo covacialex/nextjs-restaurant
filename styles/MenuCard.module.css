@@ -54,3 +54,10 @@
   font-weight: var(--font-weight-md);
   cursor: pointer;
 }
+
+@media only screen and (max-width: 680px) {
+  .image {
+    width: 10rem;
+    height: 10rem;
+  }
+}

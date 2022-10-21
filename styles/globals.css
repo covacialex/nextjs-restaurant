@@ -45,12 +45,16 @@ a {
   --font-lg: 1.8rem;
   --font-bg: 4.6rem;
 
+  --font-res: 2rem;
+
   --font-weight-sm: 300;
   --font-weight-md: 400;
   --font-weight-lg: 700;
 
   --letter-space: 0.1rem;
   --line-height: 4.6rem;
+
+  --res-lg: 1300px;
 }
 
 .main-content {
@@ -164,4 +168,22 @@ a {
 .heading-sm {
   font-size: 1.8rem;
   font-weight: var(--font-weight-sm);
+}
+
+@media only screen and (max-width: 1300px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .arrow-wrapper {
+    display: none;
+  }
 }

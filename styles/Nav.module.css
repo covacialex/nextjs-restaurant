@@ -4,11 +4,13 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
+  justify-items: center;
 }
 
 .logo {
   display: flex;
   transform: translateY(-20%);
+  justify-self: flex-start;
 }
 
 .icon {
@@ -71,4 +73,36 @@
   border-radius: 50%;
   text-align: center;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1300px) {
+  .pages li {
+    padding: 0 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .icon {
+    font-size: var(--font-res);
+  }
+
+  .title {
+    font-size: 1.4rem;
+    line-height: 0.9;
+  }
+
+  .pages li {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .pages {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 }

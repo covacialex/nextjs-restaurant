@@ -41,3 +41,46 @@
 .icon {
   color: var(--text-alt);
 }
+
+.icon__diamond {
+  color: var(--text-alt);
+}
+
+@media only screen and (max-width: 900px) {
+  .info {
+    padding: 0 1rem;
+  }
+
+  .icon__diamond {
+    display: none;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    align-items: flex-start;
+  }
+
+  .right {
+    align-items: flex-end;
+  }
+
+  .left,
+  .right {
+    gap: 0rem;
+    color: var(--text-light);
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  .info {
+    display: none;
+  }
+}

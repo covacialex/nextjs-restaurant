@@ -14,7 +14,7 @@
   background: var(--bg-color);
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(4, 15%);
+  grid-template-columns: repeat(4, 12rem);
   gap: 2rem;
   justify-content: center;
   text-align: center;
@@ -27,4 +27,24 @@
 
 .image__background {
   z-index: -1;
+}
+
+@media only screen and (max-width: 750px) {
+  .menu__container {
+    grid-template-columns: repeat(3, 12rem);
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .menu__container {
+    grid-template-columns: repeat(2, 12rem);
+    row-gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .menu__container {
+    grid-template-columns: 12rem;
+  }
 }

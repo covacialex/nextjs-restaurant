@@ -56,3 +56,36 @@
 .number {
   color: var(--text-alt);
 }
+
+@media only screen and (max-width: 550px) {
+  .container {
+    padding: 0 0.4rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .container {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mid {
+    grid-row: 1 / 2;
+    justify-self: center;
+    margin-bottom: 2rem;
+  }
+
+  .left,
+  .right {
+    flex-direction: row;
+  }
+
+  .left {
+    padding-bottom: 1rem;
+  }
+} ;
