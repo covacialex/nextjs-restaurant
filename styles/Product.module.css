@@ -18,7 +18,7 @@
 }
 
 .content {
-  color: #fff;
+  color: var(--text-light);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -38,4 +38,18 @@
 .desc {
   color: var(--text-gray);
   font-size: var(--font-md);
+}
+
+@media only screen and (max-width: 680px) {
+  .container {
+    grid-template-columns: 20rem;
+  }
+
+  .image {
+    align-self: flex-end;
+  }
+
+  .content {
+    align-self: flex-start;
+  }
 }

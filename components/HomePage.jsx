@@ -42,7 +42,7 @@ const HomePage = () => {
         </div>
       </Link>
 
-      <div className={classes.overlay}></div>
+      <div className="overlay"></div>
     </div>
   );
 };

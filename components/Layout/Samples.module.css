@@ -5,7 +5,7 @@
 }
 
 .content {
-  width: 32vw;
+  width: 32%;
   margin: 0 auto;
 }
 
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 21rem;
+  gap: 11%;
 }
 
 .sample {
@@ -28,8 +28,8 @@
 
 .imageContainer {
   position: relative;
-  width: 400%;
   height: 20rem;
+  width: 11rem;
 }
 
 .view {
@@ -52,9 +52,37 @@
   height: 1px;
 }
 
-.view:hover {
-}
-
 .imageTrans {
   transform: translateY(1rem);
+}
+
+@media only screen and (max-width: 900px) {
+  .samples {
+    /* gap: 5rem; */
+  }
+
+  .sample {
+    transform: translateY(2rem);
+  }
+
+  .content {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .samples {
+    /* gap: 4rem; */
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .samples {
+    /* gap: 0.5rem; */
+  }
+
+  .imageContainer {
+    height: 11rem;
+    width: 6rem;
+  }
 }

@@ -42,7 +42,7 @@ a {
 
   --font-sm: 0.7rem;
   --font-md: 1rem;
-  --font-lg: 1.8rem;
+  --font-lg: 1.6rem;
   --font-bg: 4.6rem;
 
   --font-res: 2rem;
@@ -168,6 +168,18 @@ a {
 .heading-sm {
   font-size: 1.8rem;
   font-weight: var(--font-weight-sm);
+}
+
+/* For opacity effect over background image */
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+
+  z-index: -1;
 }
 
 @media only screen and (max-width: 1300px) {

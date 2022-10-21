@@ -26,7 +26,7 @@ const Samples = () => {
               src="/assets/breakfast.jpg"
               alt=""
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
             />
           </div>
           <h3 className="heading-sm">Breakfast</h3>
@@ -41,7 +41,7 @@ const Samples = () => {
               src="/assets/appetizer.jpg"
               alt=""
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
             />
           </div>
           <h3 className="heading-sm">Appetizers</h3>
@@ -56,7 +56,7 @@ const Samples = () => {
               src="/assets/drinks.jpg"
               alt=""
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
             />
           </div>
           <h3 className="heading-sm">Drinks</h3>
