@@ -92,22 +92,24 @@ const Cart = () => {
                   </div>
                   <div className={classes.flex__bottom}>
                     <div>
-                      <p className={classes.qty__desc}>
-                        <span
+                      <p className="qty__desc">
+                        <button
+                          type="button"
                           onClick={() =>
                             toggleCartItemQuantity(item._id, "dec")
                           }
                         >
                           -
-                        </span>
+                        </button>
                         <span>{item.quantity}</span>
-                        <span
+                        <button
+                          type="button"
                           onClick={() =>
                             toggleCartItemQuantity(item._id, "inc")
                           }
                         >
                           +
-                        </span>
+                        </button>
                       </p>
                     </div>
 

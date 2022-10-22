@@ -72,6 +72,7 @@ a {
   font-weight: var(--font-weight-lg);
   letter-spacing: var(--letter-space);
   cursor: pointer;
+  z-index: 1;
 
   transition: all 0.4s;
 }
@@ -102,6 +103,8 @@ a {
   background-color: transparent;
   border: 1px solid var(--text-alt);
 }
+
+/* Footer arrow */
 
 .arrow-wrapper {
   position: absolute;
@@ -180,6 +183,32 @@ a {
   background: rgba(0, 0, 0, 0.8);
 
   z-index: -1;
+}
+
+/* Quantity buttons for cart and menu page */
+.qty__desc {
+  border: 1px solid var(--text-alt);
+  padding: 0;
+  width: max-content;
+}
+
+.qty__desc span,
+.qty__desc button {
+  font-size: var(--font-md);
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  color: var(--text-alt);
+}
+
+.qty__desc button {
+  background-color: transparent;
+  border: none;
+}
+
+.qty__desc span:hover,
+.qty__desc button:hover {
+  background-color: var(--text-alt);
+  color: var(--text-dark);
 }
 
 @media only screen and (max-width: 1300px) {

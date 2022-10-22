@@ -20,10 +20,14 @@ const Product = ({ productData }) => {
         <span className={classes.price}>${price}</span>
         <div className={classes.qty__content}>
           <h3 className={classes.qty__text}>Quantity:</h3>
-          <p className={classes.qty__desc}>
-            <span onClick={decQty}>-</span>
+          <p className="qty__desc">
+            <button type="buton" onClick={decQty}>
+              -
+            </button>
             <span>{qty}</span>
-            <span onClick={incQty}>+</span>
+            <button type="buton" onClick={incQty}>
+              +
+            </button>
           </p>
         </div>
         <p className={classes.desc}>{description}</p>

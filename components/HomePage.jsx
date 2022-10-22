@@ -23,9 +23,7 @@ const HomePage = () => {
           Come with family & feel the joy of mouthwatering food
         </p>
         <Link href="/menu">
-          <button type="button" className="button-transparent">
-            View our menu
-          </button>
+          <p className="button-transparent">View our menu</p>
         </Link>
       </div>
 

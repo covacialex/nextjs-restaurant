@@ -44,6 +44,7 @@
 
 .form__container {
   display: flex;
+  z-index: 2;
 }
 
 .form__order {

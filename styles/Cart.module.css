@@ -90,22 +90,6 @@
   color: var(--remove-icon);
 }
 
-.qty__desc {
-  border: 1px solid var(--text-alt);
-  padding: 0.4rem 0;
-}
-
-.qty__desc span {
-  font-size: var(--font-md);
-  padding: 0.5rem 0.8rem;
-  cursor: pointer;
-}
-
-.qty__desc span:hover {
-  background-color: var(--text-alt);
-  color: var(--text-dark);
-}
-
 .cart__bottom {
   position: absolute;
   bottom: 12px;

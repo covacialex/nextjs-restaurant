@@ -11,7 +11,8 @@
 .image {
   position: relative;
   object-fit: cover;
-  width: 100%;
+  width: 20rem;
+  height: 20rem;
   max-height: 100%;
   border-radius: 1.2rem;
   justify-self: flex-end;
