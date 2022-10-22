@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import classes from "./Samples.module.css";
+import classes from "../../styles/Samples.module.css";
 import Image from "next/image";
 
 const Samples = () => {

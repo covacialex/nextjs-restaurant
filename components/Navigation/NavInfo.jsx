@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./NavInfo.module.css";
+import classes from "../../styles/NavInfo.module.css";
 import { HiLocationMarker } from "react-icons/hi";
 import { BsClockFill, BsDiamond } from "react-icons/bs";
 import { AiFillPhone, AiFillMail } from "react-icons/ai";

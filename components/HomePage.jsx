@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./HomePage.module.css";
+import classes from "../styles/HomePage.module.css";
 import { AiOutlineBook } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
