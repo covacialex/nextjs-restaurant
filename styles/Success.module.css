@@ -1,0 +1,33 @@
+.container {
+  background-color: var(--bg-color-alt);
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success {
+  color: var(--text-light);
+  text-align: center;
+}
+
+.icon {
+  color: var(--text-alt);
+  font-size: var(--font-lg);
+}
+
+.success h2 {
+  text-transform: capitalize;
+  margin-top: 0.8rem;
+  font-weight: var(--font-weight-lg);
+  font-size: var(--font-lg);
+}
+
+.description {
+  margin: 2.4rem 0 1.4rem 0;
+}
+
+.description a {
+  margin-left: 1rem;
+  color: var(--text-alt);
+}

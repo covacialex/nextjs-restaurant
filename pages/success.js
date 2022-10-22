@@ -17,7 +17,7 @@ const Success = () => {
   }, []);
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.container}>
       <div className={classes.success}>
         <p className={classes.icon}>
           <BsBagCheckFill />
@@ -27,11 +27,13 @@ const Success = () => {
           Check your email inbox for the receipt
         </p>
         <p className={classes.description}>
-          If you have any questions, please email{" "}
+          If you have any questions, please email:
           <a
             className={classes.email}
             href="mailto:orders@restaurantdelicious.com"
-          ></a>
+          >
+            orders@restaurantdelicious.com
+          </a>
         </p>
         <Link href="/">
           <button className="button" type="button">
