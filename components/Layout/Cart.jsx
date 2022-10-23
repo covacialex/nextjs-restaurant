@@ -74,10 +74,7 @@ const Cart = () => {
           </div>
         )}
 
-        <div
-          className={classes.product__container}
-          onClick={console.log(cartItems)}
-        >
+        <div className={classes.product__container}>
           {cartItems.length >= 1 &&
             cartItems.map((item) => (
               <div className={classes.product} key={item._id}>

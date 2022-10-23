@@ -14,7 +14,9 @@ const Nav = () => {
     <div className={classes.container}>
       <div className={classes.logo}>
         <GiWineBottle className={classes.icon} />
-        <h2 className={classes.title}>Restaurant Delicios</h2>
+        <h2 className={classes.title}>
+          Restaurant <span>Delicios</span>
+        </h2>
       </div>
       <ul className={classes.pages}>
         <Link href="/">

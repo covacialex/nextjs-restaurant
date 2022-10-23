@@ -98,7 +98,31 @@
 
 @media only screen and (max-width: 680px) {
   .pages {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .pages::after {
+  }
+
+  .logo {
+    transform: translateY(0.5rem);
+  }
+
+  .buttons {
+    transform: translateY(1rem);
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-md);
+  }
+
+  .icon {
+    /* transform: translateY(-0.4rem); */
   }
 
   .container {

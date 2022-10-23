@@ -16,6 +16,7 @@
   float: right;
   padding: 3rem 0.8rem;
   position: relative;
+  z-index: 9999;
 
   color: var(--text-light);
 }
@@ -130,4 +131,14 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+@media only screen and (max-width: 370px) {
+  .cart__container {
+    width: 25rem;
+  }
+
+  .flex__top {
+    width: 10rem;
+  }
 }
